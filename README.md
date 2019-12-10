@@ -17,3 +17,7 @@ Extract-Fields -ReportsPath C:\reports -CsvPath C:\reports\pbifields.csv
 ```
 
 To overwrite an existing CSV file, use the `-Force` parameter.
+
+## Limitations
+
+Due to the complexities of Layout structure with filters on visuals, I've taken a shortcut and used regex rather than JSON navigation to mop up any missing properties not found the the first two passes. This will result in the Table column in the CSV file being blank in these cases.
